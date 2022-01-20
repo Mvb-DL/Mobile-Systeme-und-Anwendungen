@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Foodwars_Startpage.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>App</title>
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="upper_menu">
+  <div class="menu_wrapper">
+
+ <form method="post" action="/logout">
+  <button type="submit" class="logout"><i class="fa fa-sign-out" style="font-size:36px"></i>
+  </button>
+  </form>
+
+  <form method="post" action="/show_data">
+  <button type="submit" class="show-data">Show Data</button>
+  </form>
+
+  <form method="post" action="/show_data">
+  <button type="submit" class="change-data">Change Data</button>
+  </form>
+
+  </div>
+</div>
+
+<div class="menu_at_side">
+
+  <nav id="side_menu">
+    <ul>
+      <div class="first-box">
+      </div>
+      <li>
+        <div class="home-icon">
+          <div class="roof">
+            <div class="roof-edge"></div>
+          </div>
+          <div class="front"></div>
+        </div>
+      </li>
+      <li>
+        <div class="work-icon">
+          <div class="paper"></div>
+          <div class="lines"></div>
+          <div class="lines"></div>
+          <div class="lines"></div>
+        </div>
+      </li>
+      <li>
+        <div class="mail-icon">
+          <div class="mail-base">
+            <div class="mail-top"></div>
+          </div>
+        </div>
+      </li>
+      <div class="sec-box">
+      </div>
+    </ul>
+  </nav>
+
+</div>
+
+<div class="search_bar_box">
+  <div class="wrap">
+     <div class="search">
+        <input type="text" class="searchTerm" placeholder="Start cooking">
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search" style="color: #1B4D3F;"></i>
+       </button>
+       <button id="filter_button">Filter <i class="fa fa-filter"></i></button>
+     </div>
+  </div>
+</div>
+
+<div class="welcome_text_box">
+<div class="main-box">
+  <form method="post" action="/validation" id="inner_box">
+  <h2 id="welcome-text">Hy {{session["username"]}}</h2>
+  </form>
+  <img id="cake-image" src="https://images.saymedia-content.com/.image/t_share/MTc1MDE1MTY0MTI1NzgzODUx/cute-cake-slice.png">
+  <h2 id="small-text">The perfect day for a nice cake!</h2>
+</div>
+<h2 id="start_text">Shops in deiner Nähe...</h2>
+</div>
+
+<div class="big_side_box">
+<div class="side-box">
+    <div class="icons">
+    <i class="fa fa-user" id="user-icon"></i>
+    <i class="fa fa-map-marker" id="map-icon"></i>
+    <hr id="line">
+
+
+
+
+    <button class="third-box">
+      <h2 id="textinthird-box">Get Recipe</h2>
+    </button>
+    </div>
+</div>
+</div>
+
+<div class="button_menu">
+
+<div class="gallery_grid">
+
+  <div class="item2"><form method="post" action="/show_products_customer">
+  <button class="recipe-box" id="box-one">Show all products
+  </button>
+  </form></div>
+
+  <div class="item3"><form  method="post" action="/show_write_review">
+  <button class="recipe-box" id="box-four">Write review
+  </button>
+  </form></div>
+
+  <div class="item4"><form>
+  <button class="recipe-box">More
+  </button>
+  </form></div>
+</div>
+</div>
+
+<div class="gallery_box">
+
+<div class="gallery_grid">
+
+<div class="item2" id="gallery">1
+</div><div class="item3" id="gallery">2
+</div><div class="item4" id="gallery">3
+
+</div>
+</div>
+</div>
+
+</div>
+
+  </body>
+</html>
